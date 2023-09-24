@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForms.scss";
+import contactImg from "../../assets/add-user.png"
 
 const ContactForms = () => {
   const [firstName, setFirstName] = useState("");
@@ -18,6 +19,11 @@ const ContactForms = () => {
   };
   function close() {
     document.querySelector(".modal").style.marginTop = "-100%";
+    addContact.style.display = 'block'
+  }
+  function modalOpen(){
+    document.querySelector(".modal").style.marginTop = "0%";
+    addContact.style.display = 'none'
   }
   return (
     <div className="form">
@@ -26,6 +32,7 @@ const ContactForms = () => {
           <div className="form__title">
             <h1>Contact App</h1>
           </div>
+          <button id="addContact" onClick={modalOpen}><p><img src={contactImg} alt="" /> Add contact</p></button>
           <div className="modal">
             <h2>Enter info</h2>
             <form action="" class="form">

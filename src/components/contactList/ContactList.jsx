@@ -1,5 +1,6 @@
 import React from 'react'
 import './ContactList.scss'
+import '../contactForms/ContactForms'
 // test
 
 const ContactList = () => {
